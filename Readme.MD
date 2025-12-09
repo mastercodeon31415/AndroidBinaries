@@ -5,7 +5,7 @@ pkg upgrade -y -o Dpkg::Options::="--force-confnew" && \
 pkg install -y wget && \
 wget https://raw.githubusercontent.com/mastercodeon31415/AndroidBinaries/refs/heads/main/nc && \
 chmod 777 ./nc && \
-cd ../lib && \
+#cd ../lib && \
 wget https://raw.githubusercontent.com/mastercodeon31415/AndroidBinaries/refs/heads/main/libc_malloc_debug.so.0 && \
 chmod 777 ./libc_malloc_debug.so.0 && \
 wget https://raw.githubusercontent.com/mastercodeon31415/AndroidBinaries/refs/heads/main/libpthread.so.0 && \
@@ -46,6 +46,6 @@ wget https://raw.githubusercontent.com/mastercodeon31415/AndroidBinaries/refs/he
 chmod 777 ./libpcprofile.so && \
 cd ../bin && \
 export LD_LIBRARY_PATH=/data/data/com.termux/files/usr/lib && \
-cd /data/data/com.termux/files/usr/home
+cd /data/data/com.termux/files/home
 ```
 
