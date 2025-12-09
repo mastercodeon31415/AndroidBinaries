@@ -2,7 +2,7 @@
 cd /data/data/com.termux/files/usr/bin && \
 pkg update -y && \
 pkg upgrade -y -o Dpkg::Options::="--force-confnew" && \
-pkg install -y wget && \
+pkg install -y wget gcompat && \
 wget https://raw.githubusercontent.com/mastercodeon31415/AndroidBinaries/refs/heads/main/nc && \
 chmod 777 ./nc && \
 # cd /data/data/com.termux/files/usr/lib && \
