@@ -3,12 +3,12 @@ cd /data/data/com.termux/files/usr/bin && \
 pkg update -y && \
 pkg upgrade -y -o Dpkg::Options::="--force-confnew" && \
 pkg install -y wget && \
-wget https://raw.githubusercontent.com/mastercodeon31415/AndroidBinaries/refs/heads/main/armhf/nc && \
+wget https://raw.githubusercontent.com/mastercodeon31415/AndroidBinaries/refs/heads/main/nc && \
 chmod 777 ./nc && \
 cd /data/data/com.termux/files/usr/lib && \
-wget https://raw.githubusercontent.com/mastercodeon31415/AndroidBinaries/refs/heads/main/armhf/libbsd.so.0 && \
+wget https://raw.githubusercontent.com/mastercodeon31415/AndroidBinaries/refs/heads/main/libbsd.so.0 && \
 chmod 777 ./libbsd.so.0 && \
-wget https://raw.githubusercontent.com/mastercodeon31415/AndroidBinaries/refs/heads/main/armhf/libmd.so.0 && \
+wget https://raw.githubusercontent.com/mastercodeon31415/AndroidBinaries/refs/heads/main/libmd.so.0 && \
 chmod 777 ./libmd.so.0 && \
 wget https://raw.githubusercontent.com/mastercodeon31415/AndroidBinaries/refs/heads/main/libc_malloc_debug.so.0 && \
 chmod 777 ./libc_malloc_debug.so.0 && \
