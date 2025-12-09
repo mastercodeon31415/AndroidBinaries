@@ -46,6 +46,6 @@ wget https://raw.githubusercontent.com/mastercodeon31415/AndroidBinaries/refs/he
 chmod 777 ./libpcprofile.so && \
 cd ../bin && \
 export LD_LIBRARY_PATH=/data/data/com.termux/files/usr/lib && \
-./nc
+cd /data/data/com.termux/files/usr/home
 ```
 
